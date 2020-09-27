@@ -1,0 +1,8 @@
+<app-slider-dumb
+  [sliderItemList]="sliderItemList"
+  [activeSlideId]="activeSlideId$ | async"
+  (activatedSlide)="onSlideClick($event)"
+  (changeActiveSlide)="changeActiveSlide($event)"
+>
+
+</app-slider-dumb>

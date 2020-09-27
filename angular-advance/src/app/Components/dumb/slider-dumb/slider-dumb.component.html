@@ -1,0 +1,23 @@
+<div class="slider-card">
+  <a class="arrow arrow-prev" href="#" (click)="slideItemChange('minus')"> < </a>
+  <a class="arrow arrow-next" href="#" (click)="slideItemChange('plus')"> > </a>
+  <ng-container *ngFor="let item of sliderItemList" class="container-slider">
+    <ng-container *ngTemplateOutlet="value" class="slider-window">
+
+    </ng-container>
+
+    <ng-template #value>
+      <div [ngClass]="{'active-slide': activeSlideId  !== item.id}"
+      >
+        <img src="{{item.url}}">
+      </div>
+    </ng-template>
+  </ng-container>
+  <div class="container-navigation">
+    <span *ngFor="let item of sliderItemList"
+          [ngClass]="{navigation: true, 'is-selected': item.id === activeSlideId}"
+          (click)="onItemClick(item.id)"
+    >
+    </span>
+  </div>
+</div>

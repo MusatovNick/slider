@@ -1,0 +1,76 @@
+.slider-card {
+  display: table;
+  width: fit-content;
+  position: relative;
+
+  .arrow {
+    font-size: 56px;
+    text-decoration: none;
+    position: absolute;
+    color: #be811c;
+    padding: 10px;
+  }
+
+  .arrow:hover {
+    background: #cbcfcf;
+    transition: all 0.4s ease;
+  }
+
+  .arrow-prev {
+    top: 40%;
+    left: -8%;
+  }
+
+  .arrow-next {
+    top: 40%;
+    right: -8%;
+  }
+
+  .container-slider {
+    display: flex;
+  }
+
+  .active-slide {
+    display: none;
+  }
+
+  .container-navigation {
+    display: flex;
+    justify-content: center;
+
+
+    .navigation {
+      width: 11px;
+      height: 11px;
+      display: flex;
+      margin: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      background: white;
+      border: 1px solid #be811c;
+    }
+
+    .is-selected {
+      border: 1px solid #be811c;
+      background: #be811c;
+    }
+
+    .navigation:hover {
+      border: 1px solid #be811c;
+      background: #be811c;
+    }
+  }
+
+  .arrow {
+
+  }
+
+  .arrow::before {
+
+
+  }
+
+  .arrow::after {
+
+  }
+}
